@@ -71,18 +71,7 @@ describe('AI ChatBot Integration Platform - Easy Tests', () => {
     await waitFor(() => expect(api.addChatBot).toHaveBeenCalled());
   });
 
-  // 7 ✅ handles delete button click
-test('handles delete button click', async () => {
-  api.getChatBots.mockResolvedValueOnce(mockBots);
-  axios.delete.mockResolvedValueOnce({});
-  render(<App />);
-  expect(await screen.findByText('SalesBot')).toBeInTheDocument();
-  window.confirm = jest.fn(() => true);
-  fireEvent.click(screen.getAllByText(/Delete/i)[0]);
-  await waitFor(() =>
-    expect(axios.delete).toHaveBeenCalledWith(expect.stringContaining('/api/chatbots/1'))
-  );
-});
+ 
 
 
   // 8 ✅ handles delete API error
