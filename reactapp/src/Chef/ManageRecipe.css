@@ -1,0 +1,246 @@
+/* ===== Container ===== */
+.products-list {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(255, 102, 102, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.styledbutton {
+  position: static; /* remove absolute */
+}
+
+/* ===== Title ===== */
+.products-list h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #e23744;
+}
+
+/* ===== Top Buttons ===== */
+.styledbuttons {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-right: 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.styledbuttons:hover {
+  background-color: #ff4d4d;
+}
+
+/* ===== Filter Dropdown ===== */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  width: 250px;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 2px solid #ffcccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.filter-dropdown:focus {
+  border-color: #ff6666;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+thead {
+  background-color: #ffe6e6;
+}
+
+th, td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ffeded;
+}
+
+th {
+  font-weight: 700;
+  color: #e23744;
+}
+
+td {
+  color: #555;
+}
+
+/* ===== No record style ===== */
+.norecord {
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ===== Blur effect when popup is active ===== */
+.blur-wrapper.blur-active {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.3s ease;
+}
+
+/* ===== Action Buttons ===== */
+.edit-button,
+.delete-button,
+.view-button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 6px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.edit-button {
+  background-color: #8dc362;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #91e64c;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #ff3333;
+}
+
+.view-button {
+  background-color: #5586c3;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #2779dd;
+}
+
+/* ===== Delete Confirmation Popup ===== */
+.delete-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(255, 102, 102, 0.2);
+  z-index: 1000;
+  text-align: center;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.delete-popup h3 {
+  color: #e23744;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.delete-popup p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: left;
+}
+
+.delete-popup ul,
+.delete-popup ol {
+  text-align: left;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.delete-popup li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.delete-popup strong {
+  color: #e23744;
+}
+
+.delete-popup button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Confirm Delete */
+.delete-popup button:first-of-type {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-popup button:first-of-type:hover {
+  background-color: #ff3333;
+}
+
+/* Cancel Delete / Close */
+.delete-popup button:last-of-type {
+  background-color: #ff9999;
+  color: white;
+}
+
+.delete-popup button:last-of-type:hover {
+  background-color: #ff8080;
+}
+
+/* ===== Fade-in animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

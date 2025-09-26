@@ -1,0 +1,188 @@
+/* DisplayRecipes.css - Light Zomato-inspired Theme with Green Buttons */
+.product-list-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(255, 102, 102, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.product-list-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #e23744;
+}
+
+.styledbutton {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 10px 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.styledbutton:hover {
+  background-color: #218838;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section select {
+  width: 260px;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 2px solid #ffcccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+  color: #020101;
+  transition: border-color 0.3s ease;
+}
+
+.filter-section select:focus {
+  border-color: #ff6666;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+thead {
+  background-color: #ffe8e8;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ffcccc;
+}
+
+th {
+  font-weight: 700;
+  color: #e23744;
+}
+
+td {
+  color: #333;
+}
+
+.norecord {
+  text-align: center;
+  padding: 20px;
+  color: #757575;
+  font-style: italic;
+}
+
+table button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+table button:hover {
+  background-color: #218838;
+  transform: scale(1.02);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 12px 30px rgba(255, 102, 102, 0.08);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #e23744;
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #020101;
+}
+
+.popup-content p strong {
+  color: #e23744;
+}
+
+.popup-content ul,
+.popup-content ol {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.popup-content ul li,
+.popup-content ol li {
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #e23744;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
